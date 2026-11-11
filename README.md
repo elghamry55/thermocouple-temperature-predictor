@@ -1,28 +1,42 @@
 # Thermocouple Temperature Predictor
 
-## Type J Thermocouple Analysis with Flutter
+## Type J Thermocouple Analysis and Temperature Estimation
 
-A Flutter educational application developed as part of a Control Engineering course. The app lets users enter Type J thermocouple voltage readings, view the corresponding predicted and reference temperatures, and monitor the displayed error across multiple attempts.
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-Framework-02569B?logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Language-Dart-0175C2?logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/Charts-fl__chart-764ABC" alt="fl_chart" />
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84" alt="Platforms" />
+</p>
 
-## Features
+Thermocouple Temperature Predictor is an educational Flutter application developed as part of a **Control Engineering** course. It provides an interface for entering Type J thermocouple voltage readings and viewing the corresponding reference temperature, displayed prediction, and error.
 
-- **Voltage Input:** Enter a Type J thermocouple reading in millivolts (mV).
-- **Temperature Results:** View the predicted temperature and the reference temperature in Celsius.
-- **Error Display:** See the absolute prediction error presented as an MSE Loss value in the interface.
-- **Live Error Chart:** Visualize the error values across analysis attempts.
+The application also visualizes error values across multiple analysis attempts, offering a simple way to explore thermocouple readings and temperature estimation.
+
+## Key Features
+
+- **Voltage Input:** Enter Type J thermocouple readings in millivolts (mV).
+- **Temperature Results:** View the displayed predicted temperature and reference temperature in Celsius.
+- **Error Calculation:** Display the absolute difference between the predicted and reference temperatures.
+- **Live Error Chart:** Visualize error values across successive analysis attempts.
 - **Reset Functionality:** Clear the current input, results, and chart history.
-- **Clean UI:** Material Design interface with Google Fonts styling and a dedicated splash screen.
+- **Splash Screen:** Show a dedicated introductory screen when launching the application.
+- **Clean UI:** Use a Material Design interface with Google Fonts styling.
 
 ## Tech Stack
 
-- **Flutter** — Cross-platform UI framework
-- **Dart** — Application programming language
-- **fl_chart** — Live error chart visualization
-- **Google Fonts** — Typography
+| Technology | Purpose |
+| --- | --- |
+| Flutter | Cross-platform application development |
+| Dart | Application programming language |
+| fl_chart | Error chart visualization |
+| Google Fonts | Application typography |
 
 ## Project Structure
 
-```
+The application separates its main screens, chart visualization, and temperature calculation logic:
+
+```text
 lib/
 ├── main.dart
 ├── splash_screen.dart
@@ -31,21 +45,14 @@ lib/
 └── chart_widget.dart
 ```
 
-## How It Works
-
-1. Enter a voltage value in mV.
-2. Select **Analyze Reading**.
-3. The app displays the predicted and reference temperatures, along with the calculated absolute error.
-4. Each analysis adds an error point to the live chart.
-5. Use the reset button to start a new testing session.
-
 ## Getting Started
 
 ### Prerequisites
 
-- Flutter SDK installed
-- Dart SDK compatible with the project's Flutter version
-- Android Studio or VS Code
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- Dart SDK (included with Flutter)
+- Android Studio or Visual Studio Code
+- An Android emulator or a connected device
 
 ### Installation
 
@@ -73,11 +80,15 @@ lib/
    flutter run
    ```
 
+## Screenshots
+
+_Add application screenshots here to demonstrate the splash screen and temperature analysis interface._
+
 ## Project Context
 
-This project was created for a **Control Engineering** course to explore thermocouple voltage readings, temperature estimation, and error visualization through a mobile application.
+This project was developed as part of the **Control Engineering** course to explore Type J thermocouple readings, temperature estimation, and error visualization through a practical mobile application.
 
-> **Implementation note:** This repository is an educational prototype. The current model code includes a hidden-layer calculation, while the displayed prediction is presently generated from the reference-temperature calculation with a small randomized offset. It should not be presented as a fully trained or validated neural-network model.
+> **Implementation Note:** The current implementation includes a hidden-layer calculation in the model code. However, the displayed prediction is currently based on the reference-temperature calculation with a small randomized offset. The displayed error is an absolute difference, not a validated Mean Squared Error (MSE). The project should therefore be considered an educational prototype rather than a fully trained or validated neural-network model.
 
 ## Developer
 
@@ -85,3 +96,7 @@ This project was created for a **Control Engineering** course to explore thermoc
 Flutter Developer
 
 - GitHub: [@elghamry55](https://github.com/elghamry55)
+
+---
+
+**Built with Flutter and Dart.**
